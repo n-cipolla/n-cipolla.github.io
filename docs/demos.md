@@ -1,20 +1,16 @@
 # Demos
 
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+## Fourier Transform Visualization
 
 <h3>Wave Frequency Demo</h3>
 
-Frequency 1
+Frequency 1  
 <input type="range" id="f1" min="0" max="20" step="0.5" value="4">
 
-Frequency 2
+Frequency 2  
 <input type="range" id="f2" min="0" max="20" step="0.5" value="6">
 
-Frequency 3
+Frequency 3  
 <input type="range" id="f3" min="0" max="20" step="0.5" value="8">
 
 <button py-click="update">Update Plot</button>
@@ -40,14 +36,9 @@ def update(event=None):
 
     t = np.arange(0,N)*dt
 
-    y1 = create_wave(1,f1,t)
-    y2 = create_wave(1,f2,t)
-    y3 = create_wave(1,f3,t)
+    y = create_wave(1,f1,t) + create_wave(1,f2,t) + create_wave(1,f3,t)
 
-    y = y1+y2+y3
-
-    fig,ax = plt.subplots()
-
+    fig, ax = plt.subplots()
     ax.plot(t,y)
     ax.set_xlim(0,2)
     ax.set_xlabel("Time")

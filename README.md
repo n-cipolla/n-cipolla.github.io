@@ -1,12 +1,12 @@
 # Portfolio
 
-My personal portfolio website showcasing research in AI Safety and Machine Learning.
+My personal portfolio website showcasing research in Machine Learning and Astrochemistry.
 
-**Live site:** [jrosser.co.uk](https://jrosseruk.github.io)
+**Live site:** [n-cipolla.github.io](https://jrosseruk.github.io)
 
 ## Preview
 
-![Portfolio Screenshot](docs/assets/screenshot.png)
+<!-- ![Portfolio Screenshot](docs/assets/screenshot.png) -->
 
 
 ## Tech Stack
@@ -15,13 +15,6 @@ My personal portfolio website showcasing research in AI Safety and Machine Learn
 - Markdown content
 - GitHub Pages hosting
 
-## Development
-
-```bash
-# Serve locally
-python -m http.server 8000 -d docs/
-```
-
 ## Structure
 
 - `docs/index.html` - Main page
@@ -29,4 +22,4 @@ python -m http.server 8000 -d docs/
 - `docs/styles.css` - Styling
 - `docs/script.js` - Functionality
 
-Inspired by [astro-theme-cactus](https://astro-cactus.chriswilliams.dev/) :)
+Inspired by [astro-theme-cactus](https://astro-cactus.chriswilliams.dev/) and [https://jrosser.co.uk/](https://jrosser.co.uk/)
