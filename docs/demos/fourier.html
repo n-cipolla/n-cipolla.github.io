@@ -5,20 +5,32 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <style>
-body{
-font-family: serif;
-margin:0;
-padding:20px;
-max-width:900px;
+* {
+  box-sizing: border-box;
 }
 
-.slider{
-width:100%;
-margin-bottom:15px;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-#plot{
-width:100%;
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.slider {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#plot {
+  width: 100%;
 }
 </style>
 
@@ -30,100 +42,107 @@ width:100%;
 
 <p>Move the sliders to change the component frequencies.</p>
 
-<label>Frequency 1</label>
+<label>Frequency 1: <span id="f1val">2</span></label>
 <input class="slider" type="range" id="f1" min="1" max="10" value="2">
 
-<label>Frequency 2</label>
+<label>Frequency 2: <span id="f2val">5</span></label>
 <input class="slider" type="range" id="f2" min="1" max="10" value="5">
 
-<label>Frequency 3</label>
+<label>Frequency 3: <span id="f3val">8</span></label>
 <input class="slider" type="range" id="f3" min="1" max="10" value="8">
 
 <div id="plot"></div>
 
 <script>
 
-function createWave(A,f,t){
-return t.map(x => A*Math.sin(2*Math.PI*f*x))
+function createWave(A, f, t) {
+  return t.map(x => A * Math.sin(2 * Math.PI * f * x))
 }
 
-function update(){
+function update() {
+  let f1 = parseFloat(document.getElementById("f1").value)
+  let f2 = parseFloat(document.getElementById("f2").value)
+  let f3 = parseFloat(document.getElementById("f3").value)
 
-let f1=parseFloat(document.getElementById("f1").value)
-let f2=parseFloat(document.getElementById("f2").value)
-let f3=parseFloat(document.getElementById("f3").value)
+  document.getElementById("f1val").textContent = f1
+  document.getElementById("f2val").textContent = f2
+  document.getElementById("f3val").textContent = f3
 
-let N=4000
-let dt=1/800
+  let N = 4000
+  let dt = 1 / 800
 
-let t=[]
-for(let i=0;i<N;i++){t.push(i*dt)}
+  let t = []
+  for (let i = 0; i < N; i++) { t.push(i * dt) }
 
-let y1=createWave(1,f1,t)
-let y2=createWave(1,f2,t)
-let y3=createWave(1,f3,t)
+  let y1 = createWave(1, f1, t)
+  let y2 = createWave(1, f2, t)
+  let y3 = createWave(1, f3, t)
 
-let y=t.map((_,i)=>y1[i]+y2[i]+y3[i])
+  let y = t.map((_, i) => y1[i] + y2[i] + y3[i])
 
-/* FFT */
+  /* FFT */
+  let freqs = []
+  let spectrum = []
 
-let freqs=[]
-let spectrum=[]
+  for (let k = 0; k < 200; k++) {
+    let re = 0
+    let im = 0
 
-for(let k=0;k<200;k++){
-let re=0
-let im=0
+    for (let n = 0; n < N; n++) {
+      let angle = 2 * Math.PI * k * n / N
+      re += y[n] * Math.cos(angle)
+      im -= y[n] * Math.sin(angle)
+    }
 
-for(let n=0;n<N;n++){
-let angle=2*Math.PI*k*n/N
-re+=y[n]*Math.cos(angle)
-im-=y[n]*Math.sin(angle)
+    re /= N
+    im /= N
+
+    freqs.push(k / (dt * N))
+    spectrum.push(Math.sqrt(re * re + im * im))
+  }
+
+  /* plots */
+  let timeTrace = {
+    x: t,
+    y: y,
+    mode: "lines",
+    name: "signal",
+    xaxis: "x",
+    yaxis: "y"
+  }
+
+  let freqTrace = {
+    x: freqs,
+    y: spectrum,
+    mode: "lines",
+    name: "spectrum",
+    xaxis: "x2",
+    yaxis: "y2"
+  }
+
+  let layout = {
+    grid: { rows: 1, columns: 2, pattern: "independent" },
+    margin: { t: 30, b: 40, l: 50, r: 20 },
+    xaxis2: {
+      range: [0, 12]
+    },
+    font: { family: "sans-serif" }
+  }
+
+  Plotly.react("plot", [timeTrace, freqTrace], layout)
+
+  // Resize iframe to fit content with no scrollbar
+  if (window.parent !== window) {
+    const h = document.body.scrollHeight
+    window.parent.postMessage({ iframeHeight: h }, "*")
+  }
 }
 
-re/=N
-im/=N
-
-freqs.push(k/(dt*N))
-spectrum.push(Math.sqrt(re*re+im*im))
-}
-
-/* plots */
-
-let timeTrace={
-x:t,
-y:y,
-mode:"lines",
-name:"signal"
-}
-
-let freqTrace={
-x:freqs,
-y:spectrum,
-mode:"lines",
-name:"spectrum"
-}
-
-let layout={
-grid:{rows:1,columns:2,pattern:"independent"},
-margin:{t:30}
-}
-
-timeTrace.xaxis="x"
-timeTrace.yaxis="y"
-
-freqTrace.xaxis="x2"
-freqTrace.yaxis="y2"
-
-Plotly.newPlot("plot",[timeTrace,freqTrace],layout)
-
-}
-
-document.querySelectorAll("input").forEach(el=>{
-el.addEventListener("input",update)
+document.querySelectorAll("input").forEach(el => {
+  el.addEventListener("input", update)
 })
 
 update()
-
 </script>
 
 </body>
