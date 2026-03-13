@@ -21,7 +21,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="width:20px;height:20px;opacity:0.9;"> <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" stroke="currentColor" stroke-width="0.5"/></svg>
   <span>Email</span>
   </a>
-  <a href="www.jbergner.com" style="display:inline-flex; align-items:center;gap:0.5rem;text-decoration:none;color:var(--color-accent-2);">
+  <a href="https://www.jbergner.com" style="display:inline-flex; align-items:center;gap:0.5rem;text-decoration:none;color:var(--color-accent-2);">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit-icon lucide-orbit"><path d="M20.341 6.484A10 10 0 0 1 10.266 21.85"/><path d="M3.659 17.516A10 10 0 0 1 13.74 2.152"/><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/></svg>
   <span>Group Website</span>
   </a>  
@@ -30,7 +30,7 @@
 </div>
 <br>
 
-I'm a 1st year **Ph.D. student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
+I'm a 1st year **Ph.D. student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](https://www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
 
 I am currently working on a project on using machine learning techniques to predict astrochemically relevant spectra of low-temperature, multi-component solids, which we believe to be relevant to planet formation.
 
