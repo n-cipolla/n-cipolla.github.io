@@ -17,7 +17,6 @@
         <div class="publication-year">April, 2026</div>
         <div class="publication-tags">
             <span class="tag tag-safety">Deep Learning</span>
-            <a href="https://github.com/ajdominic/FourierTransforms" class="tag tag-github">Github</a>
         </div>
     </div>
 </div>

@@ -43,6 +43,8 @@ I am passionate about advancing **Chemical Education** and **Science-Based outre
 </div>
 <br><br>
 
+I have teaching experience from both my undergraduate and graduate studies with time as a Graduate Student Instructor for Chem 1AL (General Chemistry Lab for non-majors) at U.C. Berkeley, peer tutoring for Organic Chemistry I at Trinity University, and serving as a laboratory teaching assistant for the Organic Chemistry I Lab at Trinity University.
+
 Previously, I conducted polymer materials research with Professor Christina Cooley at Trinity University in San Antonio, Tx working on an analytical technique to mass and characterize polymers and polymer-based materials.
 
 Outside of my chemistry research, I enjoy going thrifting, playing my French horn in a community orchestra, and exploring the Bay Area with friends! Also, in December, I attempt to solve the [Advent of Code](https://adventofcode.com/2025/about) challenges for each year.
