@@ -30,7 +30,7 @@
 </div>
 <br>
 
-I'm a 1st year **Ph.D. student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
+I'm a 1st year **Ph.D. student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
 
 I am currently working on a project on using machine learning techniques to predict astrochemically relevant spectra of low-temperature, multi-component solids, which we believe to be relevant to planet formation.
 
@@ -38,8 +38,8 @@ I am passionate about advancing **Chemical Education** and **Science-Based outre
 
 <br>
 <div style='display:flex; gap:20px; justify-content:center;'>
-  <img src="assets/FT.png" alt="Fourier Transform Visualized" class="about-ft" loading="lazy" width="378">
-  <img src="assets/ChemDemo.jpg" alt="Demonstration" class="about-avatar" width="194" height="264" loading="lazy"> 
+  <img src="assets/FT.png" alt="Fourier Transform Visualized" loading="lazy" width="378">
+  <img src="assets/ChemDemo.jpg" alt="Demonstration" width="194" height="264" loading="lazy"> 
 </div>
 <br><br>
 
