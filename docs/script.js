@@ -260,7 +260,7 @@ class LazyImageLoader {
 // Markdown content loader
 class MarkdownLoader {
     constructor() {
-        this.sections = ['about', 'news', 'publications', 'resources', 'resume'];
+        this.sections = ['about', 'news', 'publications', 'demos', 'resume'];
         this.init();
     }
 
@@ -343,7 +343,7 @@ class MarkdownLoader {
 
         // Convert unordered lists
         html = html.replace(/^\s*- (.+)$/gm, '<li>$1</li>');
-        html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+        html = html.replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$1</ul>');
 
         // Convert paragraphs (split by double newlines)
         const paragraphs = html.split(/\n\s*\n/);
@@ -351,9 +351,8 @@ class MarkdownLoader {
             p = p.trim();
             if (!p) return '';
             
-            // Skip if already wrapped in HTML tags
-            if (p.startsWith('<') && p.endsWith('>')) return p;
-            if (p.includes('<li>') || p.includes('<h') || p.includes('<ul>') || p.includes('<div')) return p;
+            // Skip paragraphs that contain HTML tags
+            if (/<[a-z][\s\S]*>/i.test(p)) return p;
             
             return `<p>${p}</p>`;
         }).join('\n\n');

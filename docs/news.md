@@ -16,8 +16,6 @@
 
 - 03/01/24 - [Beckman Interview with Justin Mynar](https://trinity.edu/news/power-mentorship) published
 
-- 10/23/23 - [Day in the Life of a Beckman Scholar](https://www.instagram.com/p/Cyvt6s1MMws/?igshid=MzRlODBiNWFlZA%3D%3D) feature on the Beckman Foundation Instagram
+- 10/23/23 - [Day in the Life of a Beckman Scholar](https://www.beckman-foundation.org/latest-news/bsp-nicholas-cipolla-takes-part-in-the-foundations-new-instagram-series/) feature on the Beckman Foundation [Instagram](https://www.instagram.com/p/Cyvt6s1MMws/?igshid=MzRlODBiNWFlZA%3D%3D)
 
 - 03/02/23 - [Awarded the Beckman Scholars Program](https://www.beckman-foundation.org/people/nicholas-cipolla/) award for Undergraduate Research
-
-- 
