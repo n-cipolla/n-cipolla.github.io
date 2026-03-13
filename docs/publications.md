@@ -4,21 +4,20 @@
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/infusion_big_figure.jpg" alt="Infusion publication">
+        <img src="assets/Optimization_Paper.jpg" width=150 alt="Opt_Paper">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://arxiv.org/abs/2602.09987" class="publication-link">
-                Infusion: Shaping Model Behavior by Editing Training Data via Influence Functions
+            <a href="https://doi.org/10.1021/acsomega.5c09072" class="publication-link">
+                Systematic Optimization of Fluorogenic ARGET ATRP Toward Rapid and Oxygen-Tolerant Analyte Detection
             </a>
         </h3>
-        <div class="publication-venue">Preprint</div>
-        <div class="publication-authors">J Rosser, Robert Kirk, Edward Grefenstette, Jakob Foerster, Laura Ruis</div>
-        <div class="publication-year">2026</div>
+        <div class="publication-venue">Journal Article</div>
+        <div class="publication-authors">J.B. McMurry, J.R. dos Remedios, N.L. Cipolla, M. Chamoun, C.B. Cooley</div>
+        <div class="publication-year">November 19, 2025</div>
         <div class="publication-tags">
-            <span class="tag tag-safety">AI Security</span>
-            <a href="https://arxiv.org/abs/2602.09987" class="tag tag-arxiv">ARXIV</a>
-            <a href="https://github.com/jrosseruk/infusion" class="tag tag-github">GITHUB</a>
+            <span class="tag tag-safety">Fluorogenic Polymerization</span><br>
+            <a href="https://pubs.acs.org/page/acsodf/vi/undergraduate-research-as-stimulus-for-scientific-progress-usa" class="tag tag-arxiv">Special Edition Feature</a>
         </div>
     </div>
 </div>
@@ -27,95 +26,43 @@
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/AgentBreederDiagramJPG.jpg" alt="AgentBreeder publication">
+        <img src="assets/Optimization_Paper.jpg" width=150 alt="Opt_Paper">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="/AgentBreeder" class="publication-link">
-                AgentBreeder: Mitigating the AI Safety Impact of Multi-Agent Scaffolds via Self-Improvement
+            <a href="https://doi.org/10.1021/acsomega.5c09072" class="publication-link">
+                Systematic Optimization of Fluorogenic ARGET ATRP Toward Rapid and Oxygen-Tolerant Analyte Detection
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 spotlight</div>
-        <div class="publication-authors">J Rosser, Jakob Foerster</div>
-        <div class="publication-year">2025</div>
+        <div class="publication-venue">Journal Article</div>
+        <div class="publication-authors">J.B. McMurry, J.R. dos Remedios, N.L. Cipolla, M. Chamoun, C.B. Cooley</div>
+        <div class="publication-year">November 19, 2025</div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Multi-Agent Safety</span>
-            <a href="https://arxiv.org/abs/2502.00757" class="tag tag-arxiv">ARXIV</a>
-            <a href="https://github.com/J-Rosser-UK/AgentBreeder" class="tag tag-github">GITHUB</a>
+            <span class="tag tag-safety">Fluorogenic Polymerization</span><br>
+            <a href="https://pubs.acs.org/page/acsodf/vi/undergraduate-research-as-stimulus-for-scientific-progress-usa" class="tag tag-arxiv">Special Edition Feature</a>
         </div>
     </div>
 </div>
 
 <div class="publication-card">
     <div class="publication-image">
-        <img src="assets/stream_jpg.jpg" alt="Stream publication">
+        <img src="assets/FT_Paper.jpg" width=150 alt="FT_Paper">
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <a href="https://arxiv.org/pdf/2510.19875" class="publication-link">
-                Stream: Scaling Mechanistic Interpretability to Long Context in LLMs via Sparse Attention
+            <a href="https://doi.org/10.1021/acs.jchemed.4c01439" class="publication-link">
+                A Pedagogical Tour of the Fourier Transform with Applications to NMR and IR Spectroscopy
             </a>
         </h3>
-        <div class="publication-venue">NeurIPS 2025 Mech Interp Workshop</div>
-        <div class="publication-authors">J Rosser, José Luis Redondo García, Gustavo Penha, Konstantina Palla, Hugues Bouchard</div>
-        <div class="publication-year">2025</div>
+        <div class="publication-venue">Journal Article</div>
+        <div class="publication-authors">A.J. Dominic III*, N.L. Cipolla*, W.C. Pfalzgraff, J.A. Jankowski, R.J. Rapf, A. Montoya-Castillo</div>
+        <div class="publication-year">April 23, 2025</div>
         <div class="publication-tags">
-            <span class="tag tag-safety">Mechanistic Interpretability</span>
-            <a href="https://arxiv.org/pdf/2510.19875" class="tag tag-arxiv">ARXIV</a>
+            <span class="tag tag-safety">Chemical Education</span><br>
+            <a href="https://arxiv.org/abs/2410.09619" class="tag tag-arxiv">arxiv</a> |
+            <a href="https://github.com/ajdominic/FourierTransforms" class="tag tag-github">Github</a>
         </div>
     </div>
 </div>
 
-<div class="publication-card">
-    <div class="publication-image">
-        <img src="assets/mapping_faithful.jpg" alt="Mapping Faithful Reasoning publication">
-    </div>
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://openreview.net/pdf?id=NJNr5KbW3m" class="publication-link">
-                Mapping Faithful Reasoning in Language Models
-            </a>
-        </h3>
-        <div class="publication-venue">NeurIPS 2025 Mech Interp Workshop</div>
-        <div class="publication-authors">Jiazheng Li, Andreas Damianou, J Rosser, José Luis Redondo García, Konstantina Palla</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">Mechanistic Interpretability</span>
-            <a href="https://openreview.net/pdf?id=NJNr5KbW3m" class="tag tag-arxiv">ARXIV</a>
-        </div>
-    </div>
-</div>
 
-<div class="publication-card">
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://github.com/jrosseruk/CyberAgentBreeder" class="publication-link">
-                CyberAgentBreeder: An Evolutionary Framework for Breeding LLM Cybersecurity Agents
-            </a>
-        </h3>
-        <div class="publication-venue">UK AISI Bounty Programme • Project</div>
-        <div class="publication-authors">J Rosser, Joe Skinner</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">Agentic Scaffolds</span>
-            <a href="https://github.com/jrosseruk/CyberAgentBreeder" class="tag tag-github">GITHUB</a>
-        </div>
-    </div>
-</div>
-
-<div class="publication-card">
-    <div class="publication-content">
-        <h3 class="publication-title">
-            <a href="https://www.lesswrong.com/posts/qwAiKvomuAm5ekC4D/subliminal-learning-transmitting-misalignment-via" class="publication-link">
-                Transmitting Misalignment with Subliminal Learning via Paraphrasing
-            </a>
-        </h3>
-        <div class="publication-venue">LessWrong</div>
-        <div class="publication-authors">Matthew Bozoukov, Taywon Min, J Rosser, Callum McDougall</div>
-        <div class="publication-year">2025</div>
-        <div class="publication-tags">
-            <span class="tag tag-safety">AI Safety</span>
-            <a href="https://www.lesswrong.com/posts/qwAiKvomuAm5ekC4D/subliminal-learning-transmitting-misalignment-via" class="tag tag-arxiv">LESSWRONG</a>
-        </div>
-    </div>
-</div>
