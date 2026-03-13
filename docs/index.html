@@ -124,11 +124,11 @@
     <script src="script.js"></script>
     <script>
     window.addEventListener("message", (e) => {
-    if (e.data && e.data.iframeHeight) {
-        const iframe = document.querySelector("#demos-content iframe");
-        if (iframe) iframe.style.height = e.data.iframeHeight + "px";
-    }
+        if (e.data && e.data.iframeHeight) {
+            const iframe = document.querySelector("#demos-content iframe");
+            if (iframe) iframe.style.height = e.data.iframeHeight + "px";
+        }
     });
-    </script>
+</script>
 </body>
 </html>
