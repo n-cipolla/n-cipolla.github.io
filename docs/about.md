@@ -28,7 +28,7 @@
     </div>
   </div>
 </div>
-<br>
+<br><br>
 
 I'm a 1st year **Ph.D. student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](https://www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
 

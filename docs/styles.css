@@ -387,6 +387,13 @@ body {
     }
 }
 
+.demo-frame {
+border:1px solid var(--border);
+border-radius:10px;
+overflow:hidden;
+margin-top:1rem;
+}
+
 /* Show mobile menu when menu-open class is present */
 .group.menu-open .mobile-nav-menu {
     display: flex !important;
