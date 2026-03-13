@@ -327,6 +327,15 @@ class MarkdownLoader {
     parseMarkdown(markdown) {
         let html = markdown;
 
+        // Step 1: Extract and protect block-level HTML so paragraph logic doesn't mangle it.
+        // This handles <iframe>, <div>, <section>, etc. and preserves them exactly as-is.
+        const blocks = [];
+        html = html.replace(/(<(?:iframe|div|section|article|blockquote|pre|table)[^>]*>[\s\S]*?<\/(?:iframe|div|section|article|blockquote|pre|table)>)/gi, (match) => {
+            const placeholder = `\x00BLOCK${blocks.length}\x00`;
+            blocks.push(match);
+            return placeholder;
+        });
+
         // Convert headers
         html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
         html = html.replace(/^## (.*$)/gim, '<h2 class="title">$1</h2>');
@@ -350,10 +359,11 @@ class MarkdownLoader {
         html = paragraphs.map(p => {
             p = p.trim();
             if (!p) return '';
-            
-            // Skip paragraphs that contain HTML tags
+
+            // Skip placeholders and anything already wrapped in HTML tags
+            if (p.startsWith('\x00BLOCK')) return p;
             if (/<[a-z][\s\S]*>/i.test(p)) return p;
-            
+
             return `<p>${p}</p>`;
         }).join('\n\n');
 
@@ -363,6 +373,9 @@ class MarkdownLoader {
 
         // Convert horizontal rules
         html = html.replace(/^---$/gm, '<hr>');
+
+        // Step 2: Restore protected block HTML
+        html = html.replace(/\x00BLOCK(\d+)\x00/g, (_, i) => blocks[parseInt(i)]);
 
         return html;
     }
