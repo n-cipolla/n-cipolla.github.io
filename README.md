@@ -2,7 +2,7 @@
 
 My personal portfolio website showcasing research in Machine Learning and Astrochemistry.
 
-**Live site:** [n-cipolla.github.io](https://jrosseruk.github.io)
+**Live site:** [n-cipolla.github.io](https://n-cipolla.github.io)
 
 ## Preview
 

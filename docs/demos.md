@@ -4,10 +4,9 @@
 
 Move the sliders to change the component frequencies.
 
-<div class="demo-frame">
-<iframe src="demos/fourier.html"><iframe
+<iframe
 src="demos/fourier.html"
 width="100%"
-height="520"
+height="600"
 style="border:none;">
 </iframe>

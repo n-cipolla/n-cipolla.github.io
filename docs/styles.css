@@ -387,11 +387,9 @@ body {
     }
 }
 
-.demo-frame {
-border:1px solid var(--border);
+iframe{
 border-radius:10px;
-overflow:hidden;
-margin-top:1rem;
+border:1px solid var(--border);
 }
 
 /* Show mobile menu when menu-open class is present */
