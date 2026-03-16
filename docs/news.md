@@ -2,7 +2,7 @@
 
 - 08/04/26 - Started PhD at U.C. Berkeley with Jennifer Bergner
 
-- 11/19/25 - [ACS Omega Paper](https://doi.org/10.1021/acsomega.5c09072) published
+- 11/19/25 - [ACS Omega Paper](https://doi.org/10.1021/acsomega.5c09072) on fluorogenic polymerization kinetics published
 
 - 05/17/25 - Graduated <i>summa cum laude</i> from Trinity University with a B.S. in Chemistry with Honors and a minor in Computer Science
 
