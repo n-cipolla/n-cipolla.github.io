@@ -265,7 +265,7 @@ body {
 
 
 .header-logo img {
-    height: 32px;
+    height: 64px;
     width: auto !important;
     grid-area: logo; 
     align-self: center;
