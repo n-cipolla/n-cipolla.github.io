@@ -1,14 +1,14 @@
 # News
 
-- 08/04/26 - Started PhD at U.C. Berkeley with Jennifer Bergner
-
 - 11/19/25 - [ACS Omega Paper](https://doi.org/10.1021/acsomega.5c09072) on fluorogenic polymerization kinetics published
+
+- 08/04/25 - Started PhD at U.C. Berkeley with Prof. Jennifer Bergner
 
 - 05/17/25 - Graduated <i>summa cum laude</i> from Trinity University with a B.S. in Chemistry with Honors and a minor in Computer Science
 
-- 05/01/25 - Thesis Published - "Polymerization Kinetics and Polymer Characterization by Fluorogenic Atom Transfer Radical Polymerization (ATRP)"  in the Trinity University [Digital Commons](https://digitalcommons.trinity.edu/chem_honors/11/)
+- 05/01/25 - Thesis Published - "Polymerization Kinetics and Polymer Characterization by Fluorogenic Atom Transfer Radical Polymerization (ATRP)"  in the [Trinity University Digital Commons](https://digitalcommons.trinity.edu/chem_honors/11/)
 
-- 04/23/25 - [Journal of Chemical Education Paper](https://doi.org/10.1021/acs.jchemed.4c01439) published
+- 04/23/25 - [Journal of Chemical Education Paper](https://doi.org/10.1021/acs.jchemed.4c01439) on the Fourier transform published
 
 - 03/29/25 - Inducted into the Phi Beta Kappa honor society
 
