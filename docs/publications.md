@@ -59,7 +59,7 @@
         <div class="publication-tags">
             <span class="tag tag-safety">Chemical Education</span>
             <a href="https://arxiv.org/abs/2410.09619" class="tag tag-arxiv">arxiv</a> 
-            <a href="https://github.com/ajdominic/FourierTransforms" class="tag tag-github">Github</a>
+            <a href="https://github.com/Montoya-Castillo-Group/FourierTransforms" class="tag tag-github">Github</a>
         </div>
     </div>
 </div>
