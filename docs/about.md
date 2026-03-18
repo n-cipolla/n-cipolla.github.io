@@ -30,7 +30,7 @@
 </div>
 <br><br>
 
-I'm a 1st year **Ph.D. student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](https://www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
+I'm a 1st year **graduate student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](https://www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
 
 I am currently working on a project on using machine learning techniques to predict astrochemically relevant spectra of low-temperature, multi-component solids, which we believe to be relevant to planet formation.
 
