@@ -1,6 +1,6 @@
 # News
 
-- 11/19/25 - [ACS Omega Paper](https://doi.org/10.1021/acsomega.5c09072) on fluorogenic polymerization kinetics published
+- 11/19/25 - [ACS Omega Paper](https://doi.org/10.1021/acsomega.5c09072) on fluorogenic polymerization optimization published
 
 - 08/04/25 - Started PhD at U.C. Berkeley with Prof. Jennifer Bergner
 
