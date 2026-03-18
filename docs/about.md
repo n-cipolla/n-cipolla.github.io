@@ -36,7 +36,7 @@ I am currently working on a project on using machine learning techniques to pred
 
 I am passionate about advancing **Chemical Education** and **Science-Based outreach** and have published a *computational teaching lab* that walks students through aspects of the Fourier Transform in colaboration with professors at Trinity University, Chatham University, and the University of Colorado, Boulder. For more information, you can read our [Journal of Chemical Education paper](https://doi.org/10.1021/acs.jchemed.4c01439) or check out a recreation of one of the interactive sections [here](#demos).
 
-<br>
+<br><br><br>
 <div style='display:flex; gap:20px; justify-content:center;'>
   <img src="assets/FT.png" alt="Fourier Transform Visualized" loading="lazy" width="378">
   <img src="assets/ChemDemo.jpg" alt="Demonstration" width="194" height="264" loading="lazy"> 
