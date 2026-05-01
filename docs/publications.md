@@ -8,11 +8,11 @@
     </div>
     <div class="publication-content">
         <h3 class="publication-title">
-            <!-- <a href="https://doi.org/10.1021/acsomega.5c09072" class="publication-link"> -->
+            <a href="https://doi.org/10.1007/978-3-032-18974-5_23" class="publication-link">
                 Applications of Deep learning for European Crop-Type Classification Through Satellite Image Data
             </a>
         </h3>
-        <div class="publication-venue">Conference Paper, <i>in press</i> </div>
+        <div class="publication-venue">Book Chapter, </div>
         <div class="publication-authors"><b>N.L. Cipolla</b>, E. Tuba, A. Alihodzic</div>
         <div class="publication-year">April, 2026</div>
         <div class="publication-tags">
