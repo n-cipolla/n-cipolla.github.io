@@ -232,6 +232,30 @@ class NavigationHighlight {
     }
 }
 
+// Header state: reveal the small name once the banner's big name is out of view,
+// and add a subtle shadow once the page has scrolled.
+class HeaderState {
+    constructor() {
+        this.header = document.getElementById('main-header');
+        this.banner = document.querySelector('.site-banner');
+        if (!this.header) return;
+
+        if (this.banner && 'IntersectionObserver' in window) {
+            const title = this.banner.querySelector('.site-banner-title') || this.banner;
+            const observer = new IntersectionObserver(([entry]) => {
+                this.header.classList.toggle('show-title', !entry.isIntersecting);
+            }, { rootMargin: `-${this.header.offsetHeight}px 0px 0px 0px` });
+            observer.observe(title);
+        } else {
+            this.header.classList.add('show-title');
+        }
+
+        const onScroll = () => this.header.classList.toggle('is-scrolled', window.scrollY > 8);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+}
+
 // Performance optimization: Lazy load images if any are added
 class LazyImageLoader {
     constructor() {
@@ -494,7 +518,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
     new MobileNavigation();
     new SmoothScroll();
-    
+    new HeaderState();
+
     // Make NavigationHighlight available globally for smooth scroll integration
     window.navigationHighlightInstance = new NavigationHighlight();
     

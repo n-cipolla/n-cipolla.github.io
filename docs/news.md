@@ -1,4 +1,11 @@
 # News
+- 09/30/26 - Passed my qualifying exam, advancing to candidacy!
+
+- 09/17/26 - Presented my current PhD work at the UC Berkeley Graduate Research Conference
+
+- 06/24/26 - Presented my work on developing a machine learning model for the prediction of amorphous ice IR spectra at the International Symposium on Molecular Spectroscopy (ISMS)
+
+- 04/01/26 - [Conference Paper](https://link.springer.com/chapter/10.1007/978-3-032-18974-5_23) on satellite image classification using machine learning published  
 
 - 11/19/25 - [ACS Omega Paper](https://doi.org/10.1021/acsomega.5c09072) on fluorogenic polymerization optimization published
 
@@ -8,7 +15,7 @@
 
 - 05/01/25 - Thesis Published - "Polymerization Kinetics and Polymer Characterization by Fluorogenic Atom Transfer Radical Polymerization (ATRP)"  in the [Trinity University Digital Commons](https://digitalcommons.trinity.edu/chem_honors/11/)
 
-- 04/23/25 - [Journal of Chemical Education Paper](https://doi.org/10.1021/acs.jchemed.4c01439) on the Fourier transform published
+- 04/23/25 - [Journal of Chemical Education Paper](https://doi.org/10.1021/acs.jchemed.4c01439) on teaching the Fourier transform published
 
 - 03/29/25 - Inducted into the Phi Beta Kappa honor society
 

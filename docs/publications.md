@@ -12,9 +12,9 @@
                 Applications of Deep learning for European Crop-Type Classification Through Satellite Image Data
             </a>
         </h3>
-        <div class="publication-venue">Book Chapter</div>
+        <div class="publication-venue">Conference Paper</div>
         <div class="publication-authors"><b>N.L. Cipolla</b>, E. Tuba, A. Alihodzic</div>
-        <div class="publication-year">April, 2026</div>
+        <div class="publication-year">April 1, 2026</div>
         <div class="publication-tags">
             <span class="tag tag-safety">Deep Learning</span>
         </div>

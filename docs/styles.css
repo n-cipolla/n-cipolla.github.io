@@ -11,29 +11,40 @@ html {
 
 /* CSS Custom Properties for theming */
 :root {
-    /* Light theme colors (inspired by astro-theme-cactus) */
-    --color-global-bg: oklch(98.48% 0 0);
-    --color-global-text: oklch(26.99% 0.0096 235.05);
-    --color-link: oklch(55.44% 0.0431 185.69);
-    --color-accent: #af67ff;
-    --color-accent-2: oklch(18.15% 0 0);
-    --color-quote: #af67ff;
-    --color-border: #e5e7eb;
-    --color-card-bg: rgba(255, 255, 255, 0.8);
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    /* Light theme: "herbarium": warm off-white paper, forest + sage greens */
+    --color-global-bg: #f6f8f4;
+    --color-global-text: #1f2b24;
+    --color-link: #2d6a4f;
+    --color-accent: #2d6a4f;          /* forest green: nav, dots, borders */
+    --color-accent-2: #13241b;        /* near-black green: headings, icons */
+    --color-quote: #40916c;
+    --color-border: #d6e0d8;
+    --color-card-bg: rgba(255, 255, 255, 0.85);
+    --color-shadow: rgba(19, 36, 27, 0.08);
+
+    /* Banner */
+    --banner-from: #1b4332;
+    --banner-to: #2d6a4f;
+    --banner-glow: #74c69d;
+    --banner-text: #f1f7f3;
 }
 
-/* Dark theme colors */
+/* Dark theme: deep evergreen night, mint accents */
 [data-theme="dark"] {
-    --color-global-bg: oklch(23.64% 0.0045 248);
-    --color-global-text: oklch(83.54% 0 264);
-    --color-link: oklch(70.44% 0.1133 349);
-    --color-accent: #5ff26b;
-    --color-accent-2: oklch(94.66% 0 0);
-    --color-quote: oklch(94.8% 0.106 136.49);
-    --color-border: #374151;
-    --color-card-bg: rgba(31, 41, 55, 0.8);
-    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-global-bg: #0e1612;
+    --color-global-text: #c8d6cd;
+    --color-link: #8fd4ae;
+    --color-accent: #74c69d;
+    --color-accent-2: #eef5f0;
+    --color-quote: #95d5b2;
+    --color-border: #24362c;
+    --color-card-bg: rgba(21, 33, 27, 0.85);
+    --color-shadow: rgba(0, 0, 0, 0.35);
+
+    --banner-from: #081c15;
+    --banner-to: #1b4332;
+    --banner-glow: #52b788;
+    --banner-text: #e9f5ee;
 }
 
 /* Base typography */
@@ -45,14 +56,12 @@ body {
     background-color: var(--color-global-bg);
     color: var(--color-global-text);
     transition: opacity 0.2s ease;
-    padding-top: 8rem; /* Increased to account for fixed header */
+    padding-top: var(--header-h); /* fixed header height */
 }
 
-/* Responsive body padding */
+:root { --header-h: 4.25rem; }
 @media (max-width: 640px) {
-    body {
-        padding-top: 5rem; /* Reduced padding on mobile */
-    }
+    :root { --header-h: 4rem; }
 }
 
 /* Utility classes matching astro-theme-cactus */
@@ -234,60 +243,183 @@ body {
 }
 
 /* Header styles */
+/* Full-width bar; contents constrained to the same column as <main> */
 #main-header {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 57.6rem; /* Same as max-w-3xl */
-    width: 100%;
-    background-color: color-mix(in srgb, var(--color-global-bg) 95%, transparent);
+    left: 0;
+    right: 0;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    background-color: color-mix(in srgb, var(--color-global-bg) 88%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+    border-bottom: 1px solid var(--color-border);
     z-index: 100;
-    padding: 1rem 1rem 0.5rem 1rem; /* Match main content px-4 */
+    padding: 0 1rem;
+    transition: box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
+#main-header.is-scrolled {
+    box-shadow: 0 4px 18px var(--color-shadow);
+}
 
-
-/* Header grid layout */
+/* Single row: brand | nav | controls */
 .header-grid {
-    display: grid;
-    grid-template-columns: auto 1fr minmax(0, auto);
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "logo title controls"
-        "logo nav controls";
+    width: 100%;
+    max-width: 57.6rem;
+    margin: 0 auto;
+    display: flex;
     align-items: center;
-    column-gap: 1rem;
+    gap: 1.5rem;
 }
 
-
-.header-logo img {
-    height: 64px;
-    width: auto !important;
-    grid-area: logo; 
-    align-self: center;
-}
-.header-title { grid-area: title; align-self: center; }
-.header-nav { grid-area: nav; align-self: center; }
-.header-controls { 
-    grid-area: controls; 
-    justify-self: end; 
-    max-width: 100%; 
-    overflow: hidden;
+.header-brand {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    text-decoration: none;
+    color: var(--color-accent-2);
+    min-width: 0;
 }
 
-/* Nav links now centered with title - no additional margin needed */
+.header-logo-img {
+    height: 40px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+    white-space: nowrap;
+    /* Hidden while the banner (which shows the name large) is on screen */
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#main-header.show-title .header-title {
+    opacity: 1;
+    transform: none;
+}
+
+.header-name {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.header-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: color-mix(in srgb, var(--color-accent-2) 60%, transparent);
+}
+
+.header-nav { margin-left: auto; }
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
 
 @media (min-width: 640px) {
-    #main-header {
-        padding: 1rem 2rem 0.5rem 2rem; /* Match main content sm:px-8 */
-    }
+    #main-header { padding: 0 2rem; }
+}
+
+/* ============================= */
+/* Banner                        */
+/* ============================= */
+.site-banner {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(240px, 38vh, 380px);
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    color: var(--banner-text);
+    /* Fallback when no banner image is present */
+    background:
+        radial-gradient(ellipse 60% 80% at 85% 20%, color-mix(in srgb, var(--banner-glow) 35%, transparent), transparent 70%),
+        radial-gradient(ellipse 50% 60% at 10% 100%, color-mix(in srgb, var(--banner-glow) 18%, transparent), transparent 70%),
+        linear-gradient(135deg, var(--banner-from), var(--banner-to));
+}
+
+/* Faint star field so the fallback reads as "astro", not just a gradient */
+.site-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 12% 30%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 28% 72%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1.5px 1.5px at 47% 18%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 63% 55%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(1px 1px at 78% 82%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1.5px 1.5px at 91% 40%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 36% 44%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 55% 88%, rgba(255,255,255,0.5), transparent);
+    pointer-events: none;
+}
+
+.site-banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Keeps text legible over any photo */
+.site-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+        color-mix(in srgb, var(--banner-from) 85%, transparent) 0%,
+        color-mix(in srgb, var(--banner-from) 35%, transparent) 55%,
+        transparent 100%);
+}
+
+.site-banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 57.6rem;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 2.25rem;
+}
+
+@media (min-width: 640px) {
+    .site-banner-content { padding: 3rem 2rem 2.75rem; }
+}
+
+.site-banner-eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--banner-text) 75%, transparent);
+}
+
+.site-banner-title {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+}
+
+.site-banner-tagline {
+    margin: 0.85rem 0 0;
+    max-width: 38rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: color-mix(in srgb, var(--banner-text) 85%, transparent);
 }
 
 .group:hover .grayscale {
@@ -395,7 +527,7 @@ body {
 
 iframe{
 border-radius:10px;
-border:1px solid var(--border);
+border:1px solid var(--color-border);
 }
 
 /* Show mobile menu when menu-open class is present */
@@ -529,7 +661,8 @@ border:1px solid var(--border);
     border-radius: 9999px;
     object-fit: cover;
     flex-shrink: 0;
-    border: 2px solid var(--color-border);
+    border: 3px solid var(--color-global-bg);
+    outline: 2px solid var(--color-accent);
     box-shadow: 0 2px 10px color-mix(in srgb, var(--color-shadow) 50%, transparent);
     background-color: var(--color-border);
 }
@@ -682,12 +815,12 @@ button:focus-visible {
 
 /* Scroll margin for anchor links */
 :target {
-    scroll-margin-top: 8rem; /* Increased to account for fixed header */
+    scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 
 @media (max-width: 640px) {
     :target {
-        scroll-margin-top: 5rem; /* Reduced for mobile */
+        scroll-margin-top: calc(var(--header-h) + 1rem);
     }
 }
 
@@ -752,24 +885,19 @@ button:focus-visible {
 @media (max-width: 640px) {
     /* Collapse grid to a simple row on mobile; keep existing overlay menu */
     .header-grid {
-        display: flex;
-        align-items: center;
         justify-content: space-between;
         gap: 0.75rem;
-        flex-wrap: nowrap;
     }
 
-    .header-title { display: flex; align-items: center; flex: 1; min-width: 0; }
-    .header-nav { display: none; }
+    .header-brand { flex: 1; }
+    .header-subtitle { display: none; }
+    .header-logo-img { height: 34px; }
 
     /* Adjust controls spacing on mobile */
     .header-controls {
         gap: 0.5rem;
         white-space: nowrap;
     }
-
-    /* Add spacing after logo on mobile */
-    .header-logo { margin-right: 0.5rem; }
 
     /* Enlarge hamburger icon visuals on mobile */
     #toggle-navigation-menu svg {
@@ -791,24 +919,7 @@ button:focus-visible {
         transform: scale(0.95);
     }
     
-    /* Improved header spacing on mobile */
-    #main-header {
-        /* Keep fixed positioning - only adjust padding */
-        padding-bottom: 1rem;
-        /* Remove margin-bottom since fixed headers don't need margin */
-    }
-
-    /* Reduce first section top padding to avoid excessive gap under fixed header */
-    #about {
-        padding-top: 1rem !important;
-    }
-    
-    /* Better logo visibility and size */
-    #main-header svg {
-        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        height: 4rem !important; /* Increase from 3.5rem to 4rem */
-        width: 2.4rem !important;  /* Increase from 2.1rem to 2.4rem, maintaining aspect ratio */
-    }
+    .site-banner { margin-bottom: 2rem; }
 }
 
 /* Prevent text selection on interactive elements */
@@ -1029,9 +1140,9 @@ html {
 }
 
 .tag-interpretability {
-    background-color: color-mix(in srgb, #af67ff 15%, transparent);
-    border-color: #af67ff;
-    color: #af67ff;
+    background-color: color-mix(in srgb, #0f766e 15%, transparent);
+    border-color: #0f766e;
+    color: #0f766e;
 }
 
 .tag-arxiv {
@@ -1320,7 +1431,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-bg-accent);
+    background-color: color-mix(in srgb, var(--color-accent) 8%, var(--color-global-bg));
 }
 
 .resource-preview-icon svg {

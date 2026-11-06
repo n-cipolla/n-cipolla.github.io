@@ -29,15 +29,14 @@
     <!-- Fixed Header -->
     <header id="main-header" class="group">
         <div class="header-grid">
-            <!-- Logo -->
-            <a href="index.html" class="group header-logo flex items-center" aria-label="Home">
-                <img src="assets/favicon_io/logo.png" alt="Logo" class="h-6 w-auto">
+            <!-- Brand: logo + name (name fades in once the banner scrolls away) -->
+            <a href="index.html" class="header-brand" aria-label="Nick Cipolla, home">
+                <img src="assets/favicon_io/logo.png" alt="" class="header-logo-img">
+                <span class="header-title">
+                    <span class="header-name">Nick Cipolla</span>
+                    <span class="header-subtitle">Astrochemistry · UC Berkeley</span>
+                </span>
             </a>
-
-            <!-- Title -->
-            <div class="header-title">
-                <span class="text-xl font-bold sm:text-2xl">Nick Cipolla</span>
-            </div>
 
             <!-- Desktop Navigation -->
             <nav class="mobile-nav-menu header-nav sm:flex sm:flex-row sm:items-center" id="navigation-menu">
@@ -72,6 +71,19 @@
             </div>
         </div>
     </header>
+
+    <!-- Banner -->
+    <!-- Drop your image at assets/banner.jpg (wide, ~2400x800). If it's missing,
+         the banner falls back to a green gradient so the page still looks finished. -->
+    <section class="site-banner" id="top" aria-label="Introduction">
+        <img src="assets/banner.jpg" alt="" class="site-banner-img" onerror="this.remove()">
+        <div class="site-banner-overlay"></div>
+        <div class="site-banner-content">
+            <p class="site-banner-eyebrow">PhD Student · UC Berkeley</p>
+            <h1 class="site-banner-title">Nick Cipolla</h1>
+            <p class="site-banner-tagline">Machine learning for astrochemistry: predicting the spectra of low-temperature ices relevant to planet formation.</p>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <main class="mx-auto max-w-3xl px-4 sm:px-8">
