@@ -30,11 +30,11 @@
 </div>
 <br><br>
 
-I'm a 1st year **graduate student in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](https://www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space (*pun intended*).
+I'm a 2nd year **PhD Candidate in Astrochemistry at the University of California, Berkeley**, working in the group of [Jennifer Bergner](https://www.jbergner.com/group.html) on applications of machine learning and artifical intelligence in the astrochemistry space *(pun intended)*.
 
-I am currently working on a project on using machine learning techniques to predict astrochemically relevant spectra of low-temperature, multi-component solids, which we believe to be relevant to planet formation.
+I am currently working on a project on using machine learning techniques to predict astrochemically relevant spectra of low-temperature, multi-component solids, which we believe to be relevant to planet formation. I am also working on the DiskStrat ALMA Large Program to characterize the cospatial relationships between ice and gas features using matching JWST data.
 
-I am passionate about advancing **Chemical Education** and **Science-Based outreach** and have published a *computational teaching lab* that walks students through aspects of the Fourier Transform in colaboration with professors at Trinity University, Chatham University, and the University of Colorado, Boulder. For more information, you can read our [Journal of Chemical Education paper](https://doi.org/10.1021/acs.jchemed.4c01439) or check out a recreation of one of the interactive sections [here](#demos).
+I am passionate about advancing **Chemical Education** and **Science-Based outreach** and have published a *computational teaching lab* that walks students through aspects of the Fourier Transform in colaboration with professors at Trinity University, Chatham University, and the University of Colorado, Boulder. For more information, you can read our [Journal of Chemical Education paper](https://doi.org/10.1021/acs.jchemed.4c01439) or check out a recreation of one of the interactive sections [below](#demos).
 
 <br><br><br>
 <div style='display:flex; gap:20px; justify-content:center;'>
