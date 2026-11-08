@@ -330,14 +330,14 @@ body {
     position: absolute;
     inset: 0;
     background-image:
-        radial-gradient(1px 1px at 12% 30%, rgba(255,255,255,0.7), transparent),
-        radial-gradient(1px 1px at 28% 72%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(3px 3px at 12% 30%, rgba(255,255,255,0.7), transparent),
+        radial-gradient(3px 3px at 28% 72%, rgba(255,255,255,0.5), transparent),
         radial-gradient(1.5px 1.5px at 47% 18%, rgba(255,255,255,0.8), transparent),
-        radial-gradient(1px 1px at 63% 55%, rgba(255,255,255,0.45), transparent),
-        radial-gradient(1px 1px at 78% 82%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(3px 3px at 63% 55%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(3px 3px at 78% 82%, rgba(255,255,255,0.6), transparent),
         radial-gradient(1.5px 1.5px at 91% 40%, rgba(255,255,255,0.7), transparent),
-        radial-gradient(1px 1px at 36% 44%, rgba(255,255,255,0.4), transparent),
-        radial-gradient(1px 1px at 55% 88%, rgba(255,255,255,0.5), transparent);
+        radial-gradient(3px 3px at 36% 44%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(3px 3px at 55% 88%, rgba(255,255,255,0.5), transparent);
     pointer-events: none;
 }
 

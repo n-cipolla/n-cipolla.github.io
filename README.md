@@ -6,10 +6,9 @@ My personal portfolio website showcasing research in Machine Learning and Astroc
 
 ## Preview
 
-<!-- ![Portfolio Screenshot](docs/assets/screenshot.png) -->
+![Portfolio Screenshot](docs/assets/screenshot.png)
 
-
-## Tech Stack
+<!-- ## Tech Stack
 
 - Vanilla HTML, CSS, JavaScript
 - Markdown content
@@ -20,6 +19,6 @@ My personal portfolio website showcasing research in Machine Learning and Astroc
 - `docs/index.html` - Main page
 - `docs/*.md` - Content (about, publications, resume)
 - `docs/styles.css` - Styling
-- `docs/script.js` - Functionality
+- `docs/script.js` - Functionality -->
 
 Inspired by [astro-theme-cactus](https://astro-cactus.chriswilliams.dev/) and [https://jrosser.co.uk/](https://jrosser.co.uk/)
